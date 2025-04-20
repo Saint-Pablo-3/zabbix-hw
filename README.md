@@ -41,7 +41,7 @@
 ```
 
 `При необходимости прикрепитe сюда скриншоты`
-![web-server-zabbix]('img/task-1.png')
+![web-server-zabbix](img/task-1.png)
 
 Команды github:
 git clone https://github.com/netology-code/sys-pattern-homework    
@@ -71,10 +71,10 @@ git push -u origin main
 
 ```
 `При необходимости прикрепитe сюда скриншоты`
-![web-server-zabbix]('img/task-2-1.png')
-![web-server-zabbix]('img/task-2-2.png')
-![web-server-zabbix]('img/task-2-3.png')
-![web-server-zabbix]('img/task-2-4.png')
+![web-server-zabbix](img/task-2-1.png)
+![web-server-zabbix](img/task-2-2.png)
+![web-server-zabbix](img/task-2-3.png)
+![web-server-zabbix](img/task-2-4.png)
 
 git add .
 git commit -m "all tasks is done"
