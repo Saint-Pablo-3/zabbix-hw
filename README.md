@@ -33,12 +33,11 @@
 3. Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
 4. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
-Требования к результатам
+### Требования к результатам
 
 Прикрепите в файл README.md скриншот авторизации в админке.
 Приложите в файл README.md текст использованных команд в GitHub.##
 
-```
 
 `При необходимости прикрепитe сюда скриншоты`
 ![web-server-zabbix](img/task-1.png)
@@ -74,24 +73,21 @@ git push -u origin main
 Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 Приложите в файл README.md текст использованных команд в GitHub
 
+
 ### Скриншоты:
 
 ![Configuration Hosts](img/task-2-1.png)
 
-![Лог агента](img/task-2-2.png)
+![agent log](img/task-2-2.png)
 
-![Latest data host 1](img/task-2-3.png)
+![Latest data](img/task-2-3.png)
 
-![Latest data host 2](img/task-2-4.png)
 
 ### Использованные команды Git:
 
 git add .
 git commit -m "all tasks is done"
 git push origin main
-yaml
-Копировать
-Редактировать
 
 ---
 
