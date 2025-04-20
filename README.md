@@ -85,9 +85,9 @@ git push -u origin main
 
 ### Использованные команды Git:
 
-git add .
-git commit -m "all tasks is done"
-git push origin main
+git add .  
+git commit -m "all tasks is done"  
+git push origin main  
 
 ---
 
