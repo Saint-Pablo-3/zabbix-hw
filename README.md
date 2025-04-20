@@ -42,12 +42,19 @@
 `При необходимости прикрепитe сюда скриншоты`
 ![web-server-zabbix](img/task-1.png)
 
-### Использованные команды Git:
-git clone https://github.com/netology-code/sys-pattern-homework      
-git remote remove origin  
-git remote add origin https://github.com/Saint-Pablo-3/zabbix-hw.git  
-git push -u origin main  
-
+### Использованные команд:
+- sudo apt install postgresql postgresql-contrib - устанавливаем postgres
+- sudo wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_6.0+debian12_all.deb - скачиваем архив с zabix
+- sudo dpkg -i zabbix-release_latest_6.0+debian12_all.deb - распаковка архива
+- sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-apache-conf zabbix-sql-scripts устанавливаем все нужные пакеты
+- start postgresql
+- enable postgresql
+- sudo -u postgres psql -c "CREATE DATABASE zabbix OWNER zabbix;" -создаем БД в zabbix
+- sudo nano /etc/zabbix/zabbix_server.conf - можно тут редактировать данные БД
+- sudo sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf - задаем пароль
+- systemctl restart zabbix-server apache2
+- systemctl enable zabbix-server apache2
+- настройка веб-сервиса zabbix
 ---
 
 ### Задание 2
@@ -83,11 +90,14 @@ git push -u origin main
 ![Latest data](img/task-2-3.png)
 
 
-### Использованные команды Git:
-
-git add .  
-git commit -m "all tasks is done"  
-git push origin main  
+### Использованные команды: (на второй машине где только агент плюсом команды по установке скаиванию, распаковке архива zabbix для ubuntu)
+- sudo apt install zabbix-agent
+- sudo nano /etc/zabbix/zabbix_agentd.conf - прописываем нужный ip машины и имя хоста, для мониторинга агентом, на каждой машине свой ip и имя хоста
+- sudo systemctl restart zabbix-agent
+- sudo systemctl enable zabbix-agent
+- настройки через веб-интерфейс, создание хостов и прописывание данных из файла zabbix_agentd.conf
+- sudo cat /var/log/zabbix-agent/zabbix_agentd.log - просмотр логов агента
+- 
 
 ---
 
