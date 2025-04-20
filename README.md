@@ -43,7 +43,7 @@
 `При необходимости прикрепитe сюда скриншоты`
 ![web-server-zabbix](img/task-1.png)
 
-Команды github:
+### Использованные команды Git:
 git clone https://github.com/netology-code/sys-pattern-homework    
 git remote remove origin
 git remote add origin https://github.com/Saint-Pablo-3/zabbix-hw.git
@@ -55,13 +55,18 @@ git push -u origin main
 
 Установите Zabbix Agent на два хоста.
 
-Процесс выполнения
+### Процесс выполнения
 
-1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
-2. Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
-3. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
-4. Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
-5. Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
+1. Установлены Zabbix Agent на две виртуальные машины:
+   - одна из них — сервер Zabbix  
+   - вторая — отдельный клиент
+2. В конфигурации `zabbix_agentd.conf` на обоих хостах:
+   - указан IP-адрес сервера Zabbix в параметрах `Server` и `ServerActive`
+   - установлен уникальный `Hostname`
+3. Агенты добавлены через `Configuration > Hosts` в веб-интерфейсе Zabbix
+4. Привязаны шаблоны `Template OS Linux by Zabbix agent`
+5. Проверено поступление метрик в `Monitoring > Latest Data`
+
 Требования к результатам
 
 Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
@@ -69,15 +74,24 @@ git push -u origin main
 Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 Приложите в файл README.md текст использованных команд в GitHub
 
-```
-`При необходимости прикрепитe сюда скриншоты`
-![web-server-zabbix](img/task-2-1.png)
-![web-server-zabbix](img/task-2-2.png)
-![web-server-zabbix](img/task-2-3.png)
-![web-server-zabbix](img/task-2-4.png)
+### Скриншоты:
+
+![Configuration Hosts](img/task-2-1.png)
+
+![Лог агента](img/task-2-2.png)
+
+![Latest data host 1](img/task-2-3.png)
+
+![Latest data host 2](img/task-2-4.png)
+
+### Использованные команды Git:
 
 git add .
 git commit -m "all tasks is done"
 git push origin main
+yaml
+Копировать
+Редактировать
+
 ---
 
