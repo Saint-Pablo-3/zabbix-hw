@@ -43,10 +43,10 @@
 ![web-server-zabbix](img/task-1.png)
 
 ### Использованные команды Git:
-git clone https://github.com/netology-code/sys-pattern-homework    
-git remote remove origin
-git remote add origin https://github.com/Saint-Pablo-3/zabbix-hw.git
-git push -u origin main
+git clone https://github.com/netology-code/sys-pattern-homework      
+git remote remove origin  
+git remote add origin https://github.com/Saint-Pablo-3/zabbix-hw.git  
+git push -u origin main  
 
 ---
 
